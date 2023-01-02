@@ -17,7 +17,7 @@ export const fetchSerials = createAsyncThunk('serials/fetchSerials', async () =>
 
 
 const serialSlice = createSlice({
-    name: 'films',
+    name: 'serials',
     initialState,
     reducers: {},
     extraReducers: (builder) => {

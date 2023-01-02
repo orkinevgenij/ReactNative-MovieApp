@@ -17,7 +17,7 @@ export const fetchTopFilms = createAsyncThunk('films/fetchTopFilms', async () =>
 
 
 const topFilmsSlice = createSlice({
-    name: 'films',
+    name: 'topFilms',
     initialState,
     reducers: {},
     extraReducers: (builder) => {

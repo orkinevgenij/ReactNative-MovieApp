@@ -1,13 +1,13 @@
 import React from 'react'
 import { View, Text, StyleSheet, Image, FlatList, ActivityIndicator, Touchable, TouchableOpacity } from 'react-native'
-import Modal from "react-native-modal";
+import { useDispatch, useSelector } from 'react-redux';
 import { useNavigation } from '@react-navigation/native';
+import Modal from "react-native-modal";
 import AntDesign from 'react-native-vector-icons/AntDesign'
 import Entypo from 'react-native-vector-icons/Entypo'
 
 import { IMG_URL } from '../api';
-import { useDispatch, useSelector } from 'react-redux';
-import { addCartItem, deleteCartItem } from '../redux/slices/favoritesSlice';
+import { addFavoritesItem, deleteFavoritesItem } from '../redux/slices/favoritesSlice';
 import { setIsActive } from '../redux/slices/modalSlice';
 
 export const ModalComponent = ({ title, overview, imageUrl, date, trailers, setDetails, isLoading, id }) => {
@@ -20,10 +20,9 @@ export const ModalComponent = ({ title, overview, imageUrl, date, trailers, setD
 
     const onFavorites = () => {
         if (findItem) {
-            dispatch(deleteCartItem(id))
+            dispatch(deleteFavoritesItem(id))
         } else {
-            dispatch(addCartItem({ title, imageUrl, overview, id }))
-
+            dispatch(addFavoritesItem({ title, imageUrl, overview, id }))
         }
     }
 

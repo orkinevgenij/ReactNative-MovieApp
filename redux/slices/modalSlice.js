@@ -5,15 +5,13 @@ const initialState = {
 }
 
 const modalSlice = createSlice({
-    name: 'card',
+    name: 'modal',
     initialState,
     reducers: {
         setIsActive(state, { payload }) {
             state.isActive = payload
         },
     },
-
-
 });
 
 export const { setIsActive } = modalSlice.actions

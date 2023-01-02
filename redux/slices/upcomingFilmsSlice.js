@@ -17,7 +17,7 @@ export const fetchUpcomingFilms = createAsyncThunk('films/fetchUpcomingFilms', a
 
 
 const upcomingFilmsSlice = createSlice({
-    name: 'films',
+    name: 'upcomingFilms',
     initialState,
     reducers: {},
     extraReducers: (builder) => {

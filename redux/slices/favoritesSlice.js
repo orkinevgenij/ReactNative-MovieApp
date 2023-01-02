@@ -5,10 +5,10 @@ const initialState = {
 }
 
 const favoritesSlice = createSlice({
-    name: 'card',
+    name: 'favorites',
     initialState,
     reducers: {
-        addCartItem(state, { payload }) {
+        addFavoritesItem(state, { payload }) {
             const findItem = state.favoritesItem.find(obj => obj.id === payload.id)
             if (findItem) {
                 return
@@ -16,7 +16,7 @@ const favoritesSlice = createSlice({
                 state.favoritesItem.push(payload)
             }
         },
-        deleteCartItem(state, { payload }) {
+        deleteFavoritesItem(state, { payload }) {
             state.favoritesItem = state.favoritesItem.filter(obj => obj.id !== payload)
         }
     },
@@ -24,5 +24,5 @@ const favoritesSlice = createSlice({
 
 });
 
-export const { addCartItem, deleteCartItem } = favoritesSlice.actions
+export const { addFavoritesItem, deleteFavoritesItem } = favoritesSlice.actions
 export default favoritesSlice.reducer

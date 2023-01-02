@@ -52,7 +52,7 @@ export const HomeScreen = () => {
             >
                 <Text style={{ color: '#ff3900', fontWeight: '700', fontSize: 25, marginBottom: 15 }}>Топ фильмы</Text>
                 <FlatList
-                    style={{ marginBottom: 20, height: 300, }}
+                    style={{ marginBottom: 20, height: 300 }}
                     horizontal={true}
                     data={topFilms} renderItem={({ item }) =>
                         <TouchableOpacity
@@ -60,7 +60,7 @@ export const HomeScreen = () => {
                             onPress={() => onClickDetailsById(item.id)}
                         >
                             <Text style={{ fontSize: 18, color: '#fff', width: 200, textAlign: 'center' }}>{item.title}</Text>
-                            <Image style={{ width: 180, height: 240, borderRadius: 15, marginTop: 10 }} source={{
+                            <Image style={{ width: 200, height: 260, borderRadius: 15, marginTop: 10 }} source={{
                                 uri: IMG_URL + item.poster_path
                             }} />
 
@@ -77,7 +77,7 @@ export const HomeScreen = () => {
                         >
                             <View style={{ alignItems: 'center', alignSelf: 'center', }}>
                                 <Text style={{ fontSize: 18, color: '#fff', width: 250, textAlign: 'center' }}>{item.title}</Text>
-                                <Image style={{ width: 180, height: 240, borderRadius: 15, marginTop: 10 }} source={{
+                                <Image style={{ width: 200, height: 260, borderRadius: 15, marginTop: 10 }} source={{
                                     uri: IMG_URL + item.poster_path
                                 }} />
                             </View>

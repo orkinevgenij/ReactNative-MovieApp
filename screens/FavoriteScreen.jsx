@@ -5,7 +5,7 @@ import { IMG_URL } from '../api'
 
 import { fetchFilms } from '../redux/slices/filmsSlice'
 import Ionicons from 'react-native-vector-icons/Ionicons'
-import { deleteCartItem } from '../redux/slices/favoritesSlice'
+import { deleteFavoritesItem } from '../redux/slices/favoritesSlice'
 
 
 
@@ -15,7 +15,7 @@ export const FavoriteScreen = () => {
     const dispatch = useDispatch()
 
     const onClickRemove = (id) => {
-        dispatch(deleteCartItem(id))
+        dispatch(deleteFavoritesItem(id))
     }
 
     useEffect(() => {
